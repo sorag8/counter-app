@@ -1,5 +1,5 @@
 <template>
-  <h2 class="titulo">Counter Script App</h2>
+  <h2 class="titulo">Counter Script2 App</h2>
   <div class="areaContador">
     <h3 class="texto">
       Contador: <span class="valor">{{ contador }}</span>
