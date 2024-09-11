@@ -1,5 +1,7 @@
 <template>
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <MyCounter :valor="2" />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import MyCounter from './components/MyCounter.vue';
+</script>
