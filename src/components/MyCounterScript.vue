@@ -1,5 +1,5 @@
 <template>
-  <h2 class="titulo">Contador App</h2>
+  <h2 class="titulo">Counter Script App</h2>
   <div class="areaContador">
     <h3 class="texto">
       Contador: <span class="valor">{{ contador }}</span>
@@ -14,20 +14,29 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
 import { useCounter } from '@/composables/useCounter';
+import { defineComponent } from 'vue';
 
-interface Props {
-  valor: number;
-}
+export default defineComponent({
+  props: {
+    valor: { type: Number, required: true },
+  },
 
-const props = defineProps<Props>();
-const { contador, contadorCuadrado } = useCounter(props.valor);
+  setup(props) {
+    const { contador, contadorCuadrado } = useCounter(props.valor);
+
+    return {
+      contador,
+      contadorCuadrado,
+    };
+  },
+});
 </script>
 
 <style scoped>
 .titulo {
-  @apply text-2xl p-5 bg-slate-700 text-slate-200 text-center mt-5;
+  @apply text-2xl p-5 bg-blue-900 text-slate-200 text-center mt-5;
 }
 .areaContador {
   @apply p-5 bg-slate-200 text-center;
@@ -39,6 +48,6 @@ const { contador, contadorCuadrado } = useCounter(props.valor);
   @apply text-xl text-red-800;
 }
 .btn {
-  @apply px-5 py-2 bg-cyan-700 text-slate-300 hover:bg-cyan-900 hover:text-white;
+  @apply px-5 py-2 bg-gray-700 text-slate-300 hover:bg-gray-900 hover:text-white;
 }
 </style>
