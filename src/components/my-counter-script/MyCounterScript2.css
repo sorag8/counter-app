@@ -1,0 +1,15 @@
+.titulo {
+    @apply text-2xl p-5 bg-stone-900 text-slate-200 text-center mt-5;
+  }
+  .areaContador {
+    @apply p-5 bg-slate-200 text-center;
+  }
+  .texto {
+    @apply text-xl text-gray-800 mb-2;
+  }
+  .valor {
+    @apply text-xl text-red-800;
+  }
+  .btn {
+    @apply px-5 py-2 bg-stone-700 text-slate-300 hover:bg-stone-900 hover:text-white;
+  }
