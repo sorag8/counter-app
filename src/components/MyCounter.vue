@@ -4,12 +4,12 @@
     <h3 class="texto">
       Contador: <span class="valor">{{ contador }}</span>
     </h3>
-    <h3 class="texto">
+    <h3 class="texto" data-testid="square-label">
       Cuadrado: <span class="valor">{{ contadorCuadrado }}</span>
     </h3>
     <div>
       <button class="btn mr-1" @click="contador--">-1</button>
-      <button class="btn ml-1" @click="contador++">+1</button>
+      <button data-testid="increment-button" class="btn ml-1" @click="contador++">+1</button>
     </div>
   </div>
 </template>
